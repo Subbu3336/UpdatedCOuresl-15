@@ -1,0 +1,504 @@
+body{
+    margin:  0px;
+}
+.carousel-wrapper {
+  overflow: hidden;
+  width: 100%;
+  margin: auto;
+}
+
+.carousel-wrapper * {
+  box-sizing: border-box;
+}
+
+.carousel {
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+
+.carousel__photo {
+  opacity: 0;
+  position: absolute;
+  top:0;
+  width: 100%;
+  margin: auto;
+  z-index: 100;
+  max-height:  140px;
+  transition: transform .5s, opacity .5s, z-index .5s;
+}
+
+.carousel__photo.initial,
+.carousel__photo.active {
+  opacity: 1;
+  position: relative;
+  z-index: 900;
+}
+
+.carousel__photo.prev,
+.carousel__photo.next {
+  z-index: 800;
+}
+
+.carousel__photo.prev {
+  transform: translateX(-100%);
+}
+
+
+.carousel__photo.next {
+  transform: translateX(100%);
+}
+
+.carousel__button--prev,
+.carousel__button--next {
+     float:  left;
+    position: relative;
+  width: 16px;
+  height: 20px;
+  /*background-color: #FFF;*/
+  cursor: pointer; 
+  display: inline-block;
+}
+
+.carousel__button--prev img, .carousel__button--next img{
+  width: 16px;
+  height: 20px;
+}
+
+.carousel__button--prev {
+  left:0;
+}
+
+.carousel__button--next {
+  right:0;
+}
+
+/*.carousel__button--prev::after,
+.carousel__button--next::after {
+    content: " ";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    top: 10px;
+    left: 10px;
+    border-right: 2px solid black;
+    border-bottom: 2px solid black;
+    transform: translate(-50%, -50%) rotate(135deg);
+}
+
+.carousel__button--next::after {
+  left: 5px;
+  transform: translate(-50%, -50%) rotate(-45deg);
+}*/
+
+.dotsContent{
+    display: inline-block;
+    float:  left;
+    margin: 0px 20px;
+}
+
+/* New Change comment it */
+
+/*.dotsContent span{ 
+  height: 3px;
+  width: 40px;
+  background-color: #ffffff;
+  display: inline-block;
+  margin:  0px 5px;
+      border: 1px solid #000000;
+  cursor:  pointer;
+      margin-top: 5px;
+}
+
+.dotsContent span.active{
+    background-color: #000000;
+}*/
+
+.line-container{
+  text-align: center;  
+}
+
+.slideText{
+  margin : 0px;
+  text-align: center;
+}
+
+.buttons{
+    display: flex;
+    margin:  30px 0px;
+}
+
+.middle--block{
+    margin:  0px auto;
+}
+
+ .downloadContainer{
+  margin: 0px 30px;
+ }
+
+ .header-desktop-content{
+   padding: 0px 25px;
+   display:  none;
+ }
+
+
+ .header-desktop-content h3{
+   margin-top: 0px;
+ }
+
+@media (max-width:767px) {
+    .middle--block {
+        margin: 0px auto;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        margin: 0px 20px;
+    }
+    .slideText p{
+      display: none;
+      margin: 0;
+  }
+  .slideText p.active{
+      display: block;
+  }
+  .line-container-tab{
+    display: none;
+  }
+}
+
+
+/* HTML */
+
+.orangeBackground{
+  background: url(images/orangeBg.jpg);
+  background-size: cover;
+  padding:  20px 0px;
+}
+
+.orangeBackground .carousel-wrapper{
+   max-width: 80%;
+}
+
+.text-center{
+  text-align: center;
+}
+
+.white-text{
+  color:  white;
+}
+
+.orangeBackground .middle--block {
+  margin:  0px;
+}
+
+.orangeBackground .slideText{
+  color:  white;
+}
+
+.downloadText{
+  text-align: center;
+  font-size: 18px;
+  color: white;
+  font-weight: 600;
+  margin: 0 0 10px;
+}
+
+.download-buttons button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: black;
+    color: white;
+    font-size: 18px;
+    border-radius: 30px;
+    width: 100%;
+    border: none;
+    margin: 20px 0px;
+}
+
+.download-buttons button img{
+    max-width: 100%;
+    border-radius: 30px;
+}
+
+.orangeBackground .carousel__photo{
+  max-height: 100%;
+}
+
+@media (min-width:  768px){
+  .visible-desktop{
+    display: block;
+  }
+  .hidden-desktop{
+    display:  none !important;
+  }
+.download-buttons button{
+  margin: 20px 20px;
+}
+
+  .orangeBackground {
+    display: flex;
+    padding: 40px;
+    flex-direction: column;
+  }
+  .content{
+    display: flex;
+  }
+  .orangeBackground .carousel-wrapper{
+    width:  30%;
+    max-width: none;
+
+  }
+  .dataContainer{
+    width:  70%;
+  }
+  .carousel{
+    text-align: center;
+  }
+  .buttons{
+    display: none;
+  }
+  .scrollDownload {
+    flex-direction: row;
+    padding: 10px 20px;
+  }
+  .scrollDownload span.imageIcon{ 
+    height: 40px;
+    width: 3px;
+    background-color: #ffffff;
+    display: inline-block;
+    margin:  0px 5px;
+    border: 1px solid #000000;
+    cursor:  pointer;
+    margin-top: 5px;
+  }
+
+  .line-container-tab{
+    text-align: left;
+  }
+
+  .dataContainer > h3,.dataContainer > p{
+    padding-left: 20px;
+    margin: 0px 0px 20px;
+    text-align: left;
+  }
+  .scrollDownload{
+    display: flex;
+    flex-direction: column;
+  }
+  .scrollDownload > div{
+    width: 50%;
+  }
+
+  .download-buttons{
+    display: flex;
+  }
+
+  .line-container-tab p.active span.imageIcon{
+    background-color: #000000;
+  }
+
+  .line-container-tab > p{
+        display: flex;
+        margin: 0 0 20px;
+        max-width: 80%;
+        cursor: pointer;
+  }
+  .imageText{
+    padding-top: 5px;
+    padding-left: 20px;
+    font-size: 18px;
+    color: white;
+  }
+}
+
+
+@media (min-width:  768px) and (max-width: 1079px ){
+   .scrollDownload > div{
+    width: 80%;
+  }
+
+}
+
+@media (min-width:  1080px) {
+  .header-desktop-content {
+      display: block;
+  }
+  .header{
+    position: absolute;
+    margin-left: 30%;
+    width: calc(100% - 30%);
+    text-align: left;
+  }
+  .header h3,.header p{
+    text-align: left;
+  }
+  .dataContainer{
+    margin-top: 120px;
+  }
+}
+
+@media (min-width:  1080px) and (max-width:  1399px){
+  .scrollDownload {
+      flex-direction: column;
+  }
+}
+
+@media (min-width:  1400px){
+  .scrollDownload {
+      flex-direction: row;
+  }
+  .download-buttons {
+    display: flex;
+    flex-direction: column;
+ }
+
+}
+
+
+
+/* New Changes */
+
+.dotsContent{
+  width: 100%;
+}
+
+.dotsContent .line-container > span{ 
+  height: 4px;
+  width: calc(33.33% - 10px);
+  background-color: #ffffff;
+  display: inline-block;
+  margin:  0px 5px;
+  border: 1px solid #000000;
+  cursor:  pointer;
+  margin-top: 5px;
+}
+
+.scrollDownload span.imageIcon{
+  height: 40px;
+  width: 3px;
+  background-color: #ffffff;
+  display: inline-block;
+  margin: 0px 5px;
+  border: 1px solid #000000;
+  cursor: pointer;
+  margin-top: 5px;
+}
+
+
+.dotsContent span.active.gifActive span{ 
+    height: 4px;
+    width: 30%;
+    display: flex;
+    background: black;
+}
+
+.dotsContent span.active.gifActive,.scrollDownload span.gifActive{
+    background-color: white;
+    border: none;
+}
+
+
+.dotsContent span.active span{ 
+    height: 4px;
+    width: 30%;
+    display: flex;
+    background: black;
+}
+
+.dotsContent span.active,.scrollDownload span.gifActive{
+    background-color: white;
+    border: none;
+}
+
+
+.dotsContent span.active{
+    background-color: #000000;
+}
+
+.line-container-tab p.active span.imageIcon.gifActive{
+    background-color: white;
+  }
+
+.scrollDownload span.imageIcon{
+  height:  60px;
+}
+
+.imageText {
+    padding-top: 15px;
+}
+
+.scrollDownload .line-container-tab p.active span.gifActive span{
+    height: 10px;
+    width: 4px;
+    display: flex;
+    background: black;
+}
+
+
+@media (min-width:  768px) and (max-width: 1079px ){
+   .scrollDownload > div{
+    width: 80%;
+  }
+
+}
+
+@media (min-width:  1080px) {
+  .header-desktop-content {
+      display: block;
+  }
+  .header{
+    position: absolute;
+    margin-left: 30%;
+    width: calc(100% - 30%);
+    text-align: left;
+  }
+  .header h3,.header p{
+    text-align: left;
+  }
+  .dataContainer{
+    margin-top: 120px;
+  }
+}
+
+@media (min-width:  1080px) and (max-width:  1399px){
+  .scrollDownload {
+      flex-direction: column;
+  }
+}
+
+@media (min-width:  1400px){
+  .scrollDownload {
+      flex-direction: row;
+  }
+  .download-buttons {
+    display: flex;
+    flex-direction: column;
+ }
+
+}
+
+
+
+.dotsContent .line-container > span{
+  background-color: white;
+  border: none;
+}
+
+.dotsContent span.active span {
+    height: 4px;
+    width: 30%;
+    display: flex;
+    background: black;
+}
+
+.line-container-tab p.active span.imageIcon {
+    background-color: white;
+}
+
+.scrollDownload .line-container-tab p.active span.imageIcon span{
+    height: 10px;
+    width: 4px;
+    display: flex;
+    background: black;
+}

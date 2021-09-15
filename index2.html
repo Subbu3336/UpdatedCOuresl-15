@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>JavaScript Carousel</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+</head>
+
+<body>
+    <div class="container">
+
+       <div class="orangeBackground hidden-desktop visible-mobile">
+          <h3 class="white-text text-center">New Year New App</h3>
+          <p class="white-text text-center">Celebrating Text app </p>
+          <div class="carousel-wrapper">
+            <div class="carousel">
+              <img class="carousel__photo initial" src="images/Iphone2.png">
+               <img class="carousel__photo" src="images/iphone.png">
+                <img class="carousel__photo" src="images/Iphone2.png">
+                 <img class="carousel__photo" src="images/iphone.png">
+            </div>
+            <div class="buttons">
+              <div class="middle--block">
+                  <div class="carousel__button--prev"><img src="images/left-chevron.png"></div> 
+                  <div class="dotsContent" id="dotsContent">
+                      <p class="slideText"></p>
+                    <div class="line-container"></div>
+                  </div>
+                  <div class="carousel__button--next"><img src="images/right-chevron.png"></div>
+              </div>
+            </div>
+            <div class="downloadContainer">
+                <p class="downloadText">Download Our App</p> 
+                <div class="download-buttons">
+                  <button><img src="images/apple.png"/> apple store</button>
+                  <button><img src="images/google.png"/> Google store</button>
+                </div>
+            </div>
+          </div>
+        </div> 
+
+        <div class="orangeBackground hidden-mobile visible-desktop">
+          <div class="carousel-wrapper">
+            <div class="carousel">
+              <img class="carousel__photo initial" src="images/Iphone2.png">
+               <img class="carousel__photo" src="images/iphone.png">
+                <img class="carousel__photo" src="images/Iphone2.png">
+            </div>
+            <div class="buttons">
+              <div class="middle--block">
+                  <div class="carousel__button--prev"><img src="images/left-chevron.png"></div> 
+                  <div class="dotsContent" id="dotsContent">
+                      <div class="slideText"></div>
+                    <div class="line-container"></div>
+                  </div>
+                  <div class="carousel__button--next"><img src="images/right-chevron.png"></div>
+              </div>
+            </div>
+            </div>
+            <div class="dataContainer">
+                <h3 class="white-text text-center">New Year New App</h3>
+                <p class="white-text text-center">Celebrating Text app </p>
+                <div class="scrollDownload">
+                    <div class="line-container">
+                       <p><span class="imageIcon active" data-number="1"></span><span class="imageText">Access Your Account from Anywhere</span></p>
+                       <p><span class="imageIcon" data-number="2"></span><span class="imageText">Send money with zelic</span></p>
+                       <p><span class="imageIcon" data-number="3"></span><span class="imageText">Deposits Checks</span></p>
+                    </div>
+                    <div class="downloadContainer">
+                      <p class="downloadText">Download Our App</p> 
+                      <div class="download-buttons">
+                        <button><img src="images/apple.png"/> apple store</button>
+                        <button><img src="images/google.png"/> Google store</button>
+                      </div>
+                   </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
